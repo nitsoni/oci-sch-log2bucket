@@ -1,0 +1,74 @@
+# Copyright (c) 2020, Oracle and/or its affiliates. All rights reserved.
+# Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl.
+
+title: "Quick start to create Service Connector"
+stackDescription: "A Quick start to showcase the use of custom task to change the format of the log from JSON to XML. Here SCH source is _Audit logs and target is the object storage."
+schemaVersion: 1.1.0
+version: "20200301"
+locale: "en"
+
+variableGroups:
+- title: ${Messages.solutionsHub.generalConfig()}
+  visible: false
+  variables:
+  - tenancy_ocid
+  - current_user_ocid
+  - VCN-CIDR
+  - fnsubnet-CIDR
+  - ocir_repo_name
+  - service_connector_tasks_batch_time_in_sec
+  - service_connector_tasks_batch_size_in_kbs
+
+- title: ${Messages.solutionsHub.requiredConfig()}
+  visible: true  
+  variables:
+  - ocir_user_name
+  - ocir_user_password
+
+
+- title: ${Messages.solutionsHub.optionalConfig()}
+  visible: true  
+  variables:
+  - compartment_ocid
+  - region
+  - bucket_name
+  - log_group_id
+
+variables:
+
+  compartment_ocid:
+    type: oci:identity:compartment:id
+    required: true
+    title: ${Messages.solutionsHub.genericVariables.compartment.title()}
+    description: ${Messages.solutionsHub.genericVariables.compartment.description()}
+
+  region:
+    type: oci:identity:region:name
+    required: true
+    title: "Region"
+    description: "Region where the stack will be deployed."
+
+  bucket_name:
+    type: string
+    required: true
+    title: "Bucket Name"
+    description: "Name of the bucket where logs will be archived."
+
+  log_group_id:
+    type: string
+    required: true
+    title: "Name of the log group."
+    description: "Name source log group from where the logs will be archived."
+
+  ocir_user_name:
+    type: string
+    required: true
+    title: "User Name"
+    description: "User name to connect to OCIR, to push fn image."
+
+  ocir_user_password:
+    type: string
+    required: true
+    title: "Auth Code"
+    description: "Auth code for connecting to OCIR, to push fn image."
+
