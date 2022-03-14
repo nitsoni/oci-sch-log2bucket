@@ -13,7 +13,7 @@ If you don't have the required permissions and quota, contact your tenancy admin
 
 ## Deploy Using Oracle Resource Manager
 
-1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/nitsoni/oci-sch-log2bucket/releases/latest/download/oci-sch-log2bucket-latest.zip)
+1. Click [![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?region=home&zipUrl=https://github.com/oracle-quickstart/oci-sch-log2bucket/releases/latest/download/oci-sch-log2bucket-latest.zip)
 
     If you aren't already signed in, when prompted, enter the tenancy and user credentials.
 
